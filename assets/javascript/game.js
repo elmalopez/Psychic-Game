@@ -9,7 +9,6 @@ var losses = 0;
 var guessesLeft = 9;
 var guessesSoFarVar = [];
 
-// console.log(options);
 
 //call function for computer choice
 randomCharacter();
@@ -25,14 +24,15 @@ document.onkeyup = function(event) {
 
     // //compare choices and determine a win or loss or tie 
     if (userChoice === computerChoice) {
-        alert("I can't believe it...you guessed it, my darling!");
+        alert("You got it!");
         wins = wins + 1;
         document.getElementById("wins").innerHTML = wins;
         randomCharacter();
         guessesLeft = 9;
-        guessesSoFarVar = "Let's go again...you haven't guessed anything this time around";
+        guessesSoFarVar = "Guess again";
         document.getElementById("guessesSoFar").innerHTML = guessesSoFarVar;
         guessesSoFarVar = [];
+    
     } else if (guessesLeft > 0){
         
         guessesSoFarVar.push(" " + userChoice);
